@@ -53,7 +53,7 @@ class RequisitionSystem:
             if it is more then it then it show pending. i havenot used any principes as 
             it violates the open/closed principle as changing rules need required modifying the code
             in furture i will used open/closed principle this rules helps to change or seperate rule function 
-            and keep logic seperate from printion.  """
+            and keep logic seperate from printing.  """
     def requisition_approval(self):
         
         if self.total_cost < 500:
@@ -73,7 +73,7 @@ class RequisitionSystem:
     """ This method helps the manager to update pending requisition 
     in the furture it can be improved using the Single Responsibility Principle (SRP).  
     Currently, it mixes input handling and status updates, making it harder to maintain and test.  
-    Separating input from business logic will make the code cleaner, easier to extend, and less error-prone.
+    Separating input from b logic will make the code cleaner, easier to extend, and less error-prone.
     """
     def respond_requisition(self):
         if self.status =="pending":
@@ -92,7 +92,7 @@ class RequisitionSystem:
     This helps to displays or print all requisition information of the requisitionsystem. 
     it violates the DRY principle because it repeats information already printed in Staff_info() and requisition_approval() 
     It can be improved by following the DRY (Don't Repeat Yourself) principle.  
-    Create a single function to format and return requisition info, then reuse it wherever needed to avoid repeated code and make maintenance easier.
+    Create a single function to format and return requisition info,  avoid repeated code and make maintenance easier.
     """
     def display_requisition(self):
         print("----requisition----")
@@ -105,8 +105,7 @@ class RequisitionSystem:
         print(f"Approval Reference Number: {self.approve_reference}")
     """
     This helps to displays statistics for this requisition object only. 
-    It can be improved using the Single Responsibility Principle (SRP) and 
-    Separation of Concerns (SoC) by moving statistics calculation to the system level, allowing tracking across all requisitions and keeping responsibilities clear.
+    It can be improved using the Single Responsibility Principle (SRP) 
     """
     def requisition_statistic(self):
         print("-----static-----")
