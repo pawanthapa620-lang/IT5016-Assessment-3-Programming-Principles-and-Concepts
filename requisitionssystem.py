@@ -72,8 +72,7 @@ class RequisitionSystem:
             
     """ This method helps the manager to update pending requisition 
     in the furture it can be improved using the Single Responsibility Principle (SRP).  
-    Currently, it mixes input handling and status updates, making it harder to maintain and test.  
-    Separating input from b logic will make the code cleaner, easier to extend, and less error-prone.
+    .
     """
     def respond_requisition(self):
         if self.status =="pending":
@@ -124,4 +123,5 @@ for i in range(5):
     requisition.respond_requisition()
     requisition.display_requisition()
     requisition.requisition_statistic()
+
 
